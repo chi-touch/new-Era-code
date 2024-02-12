@@ -1,4 +1,4 @@
-package FireDrill;
+package chichi;
 
 import FireDrill.StackWork;
 import org.junit.jupiter.api.BeforeEach;

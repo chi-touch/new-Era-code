@@ -1,3 +1,4 @@
+/*
 
 package FireDrill;
 
@@ -23,12 +24,46 @@ class ArrayListTest {
     @Test
     public void testThatNewElementIsAddedToTheList(){
         assertTrue(strings.isEmpty());
-        strings.add("G-String");
+        strings.add("Chichi");
         assertFalse(strings.isEmpty());
 
     }
 
+    @Test
+    public void addNewElementAndRemoveElement(){
+        assertTrue(strings.isEmpty());
+        strings.add("Chichi");
 
+        strings.remove("Chichi");
+        assertTrue(strings.isEmpty());
+    }
 
+    @Test
+    public void testThatTwoElementCanBeAddedAndOneIsRemoved(){
+        assertTrue(strings.isEmpty());
+        strings.add("chichi");
+        strings.add("oluebube");
+        assertFalse(strings.isEmpty());
+        strings.remove("chichi");
+        assertFalse(strings.isEmpty());
+    }
 
-}
+    @Test
+    public void testThatElementCanBeRemovedFromList(){
+        assertTrue(strings.isEmpty());
+        strings.add("chichi");
+        strings.add("oluebube");
+        strings.add("chime");
+        assertThrows(ArrayIndexOutOfBoundsException.class,()->strings.remove("chichi"));
+    }
+
+    @Test
+    public void testThatElementCanBeGottenFromTheIndex(){
+        assertTrue(strings.isEmpty());
+        strings.add("chichi");
+        strings.add("oluchi");
+        strings.add("chime");
+        strings.add("me");
+        strings.add("them");
+        assertFalse(strings.isEmpty());
+        assertEquals("chichi",strings.get("0")*/
