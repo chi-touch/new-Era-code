@@ -1,6 +1,4 @@
-import java.util.Arrays;
-
-public class Chichi {
+public class ChichiArrayList {
     public static void main(String[] args) {
         int[][] chiArray = new int[3][5];
         chiArray[0][0] = 1;

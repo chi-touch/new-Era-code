@@ -1,4 +1,3 @@
-/*
 
 package FireDrill.FireDrill5;
 
@@ -17,22 +16,5 @@ public class ArrayList {
         elements[numberOfElement]=element;
         numberOfElement++;
     }
-
-    public void remove(String element) {
-        elements[numberOfElement]= element;
-        numberOfElement --;
-    }
-
-    public int get(String element) {
-        for (int count = 0; count < elements.length-1; count++) {
-            if(elements[count].equals(element));
-
-            return count+1;
-
-        }
-        return elements[index];
-
-    }
 }
 
-*/
