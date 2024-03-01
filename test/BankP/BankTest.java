@@ -18,7 +18,7 @@ class BankTest {
 
     @Test
     public void registerCustomerTest(){
-        Account account1 = bank.registerCustomer("chichi","glo","2222",1234567890);
+        Account account = bank.registerCustomer("chichi","glo","2222",1234567890);
         assertEquals(1,bank.getAccounts());
     }
 
@@ -31,9 +31,20 @@ class BankTest {
 
     @Test
     public void testForDeposit(){
-        Account account1 = bank.registerCustomer("chichi","glo","2222",1234567890);
+        Account account= bank.registerCustomer("chichi","glo","2222",1234567890);
         bank.deposit(1234567890,1000);
         assertEquals(1000,bank.checkBalance(1234567890,"2222"));
+    }
+
+    @Test
+    public void testThatTwoAccountCanBeDeposited(){
+        Account account= bank.registerCustomer("chichi","glo","2222",1234567890);
+        bank.deposit(1234567890,1000);
+        assertEquals(1000,bank.checkBalance(1234567890,"2222"));
+        Account account1= bank.registerCustomer("josh","chis","1234",1234567889);
+        bank.deposit(1234567889,2000);
+        assertEquals(2000, bank.checkBalance(1234567889,"1234"));
+
     }
 
     @Test
@@ -76,11 +87,4 @@ class BankTest {
 
     }
 
-            /*    @Test
-             public void testToFindAccountNumber(){
-        bank.registerCustomer("chichi","chi","2222");
-        bank.registerCustomer("chichi","dav","1234");
-        bank.registerCustomer("aramide","vic","0000");
-        bank.findAccount();
-                     }*/
 }

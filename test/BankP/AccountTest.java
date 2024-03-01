@@ -54,5 +54,13 @@ class AccountTest {
 
     }
 
+    @Test
+    public void testThatAccountNumberIsCorrect(){
+        account.deposit(50000);
+        assertEquals(350685601,account.getAccountNumber());
+    }
+
+
+
 
 }
