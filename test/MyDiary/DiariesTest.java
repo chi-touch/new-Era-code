@@ -39,13 +39,4 @@ class DiariesTest {
     }
 
 
-            # #account = self.findAccount(acct_number)
-            #
-            # # for account in self.accounts:
-            # if account.get_account_number() == acct_number:
-            #     account.deposit(amount)
-
-
-
-
 }

@@ -12,7 +12,7 @@ public void initializeSevenSegment(){
 }
     @Test
     public void testThatThereSevenSegments(){
-    seven =
+
 
 
     }
