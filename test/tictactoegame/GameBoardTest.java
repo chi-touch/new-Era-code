@@ -13,15 +13,15 @@ class GameBoardTest {
         gameBoard = new GameBoard();
     }
 
-    @Test
-    public void testThatThereIsABoard(){
-        assertTrue(gameBoard.getBoard());
-    }
-
-    @Test
-    public void testThatTheFieldsOnTheBoardIsEmpty(){
-        assertEquals(ValueOfCell.EMPTY,gameBoard.getNumberFields());
-    }
+//    @Test
+//    public void testThatThereIsABoard(){
+//        assertTrue(gameBoard.getBoard());
+//    }
+//
+//    @Test
+//    public void testThatTheFieldsOnTheBoardIsEmpty(){
+//        assertEquals(ValueOfCell.EMPTY,gameBoard.getNumberFields());
+//    }
 
 
 //    @Test

@@ -32,12 +32,12 @@ class TicTacToeTest {
 
     @Test
     public void testThatPlayerOneCanPlay(){
-        tacToe.players(1,1);
+        tacToe.play(1,1);
         assertEquals(ValueOfCell.X, tacToe.checkTable()[0][0]);
     }
     @Test
     public void testThatPlayerTwoCanPlay() {
-        tacToe.players(2, 6);
+        tacToe.play(2, 6);
         assertEquals(ValueOfCell.O, tacToe.checkTable()[1][2]);
     }
     @Test
@@ -45,7 +45,75 @@ class TicTacToeTest {
         tacToe.totalField(9);
         assertEquals(9, tacToe.totalField(9));
     }
+//    @Test
+//    public void testThereIsAWinner(){
+//        tacToe.winner(1);
+//        assertEquals(1,tacToe.getNumberOfFields());
+//    }
+
     @Test
+    public void testThatOnlyTwoPlayersCanPlay(){
+        assertThrows(InvalidPlayerException.class,()->tacToe.play(3,1));
+    }
+    @Test
+    public void testThatNumbersGreaterThan9CantBePlayed(){
+        assertThrows(InvalidFieldNumberException.class,()->tacToe.play(1,20));
+    }
+//    @Test
+//    public void testThatPlayerOneCanWin(){
+//        //assertNull(tacToe.getWinner());
+//        tacToe.play(1, 1);
+//        tacToe.play(1, 2);
+//        tacToe.play(1, 3);
+//
+//        //assertNotNull(tacToe.getWinner());
+//        assertEquals(ValueOfCell.X, tacToe.getWinner());
+//
+//        System.out.println(tacToe.getWinner());
+//    }
+
+
+
+    @Test
+    public void testToGetRow1ForPlayer1Winning(){
+        tacToe.play(1,1);
+        tacToe.play(1,4);
+        tacToe.play(1,7);
+        System.out.println(Arrays.deepToString(tacToe.checkTable()));
+        assertEquals(1, tacToe.getWinner());
+        System.out.println(tacToe.getWinner());
+
+    }
+    @Test
+    public void testToGetRow1ForPlayer2Winning() {
+        tacToe.play(2, 1);
+        tacToe.play(2, 4);
+        tacToe.play(2, 7);
+        System.out.print(Arrays.deepToString(tacToe.checkTable()));
+        assertEquals(2, tacToe.getWinner());
+        System.out.println(tacToe.getWinner());
+
+
+    }
+
+    @Test
+    public void testForColumn2ForPlayer1(){
+        tacToe.play(1,7);
+        tacToe.play(1,8);
+        tacToe.play(1,9);
+
+
+    }
+
+    @Test
+    public void testForColumn2ForPlayer2(){
+        tacToe.play(2,4);
+        tacToe.play(2,5);
+        tacToe.play(2,6);
+
+
+
+    }
 
 
 }
