@@ -77,8 +77,8 @@ class TicTacToeTest {
     @Test
     public void testToGetRow1ForPlayer1Winning(){
         tacToe.play(1,1);
-        tacToe.play(1,4);
-        tacToe.play(1,7);
+        tacToe.play(1,2);
+        tacToe.play(1,3);
         System.out.println(Arrays.deepToString(tacToe.checkTable()));
         assertEquals(1, tacToe.getWinner());
         System.out.println(tacToe.getWinner());
@@ -101,6 +101,7 @@ class TicTacToeTest {
         tacToe.play(1,7);
         tacToe.play(1,8);
         tacToe.play(1,9);
+        assertEquals(1, tacToe.getWinner());
 
 
     }
