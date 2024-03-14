@@ -10,7 +10,7 @@ class AccountTest {
     private Account account;
     @BeforeEach
     public void initializeAccount(){
-        account = new Account("chichi",350685601,"2222");
+        account = new Account("chichi",1,"2222");
     }
 
     @Test
@@ -35,7 +35,7 @@ class AccountTest {
     }
 
     @Test
-    public void testForNegativeAmountWithdrawn() {
+    public void testForNegativeAmountCanNotBeWithdrawn() {
         assertThrows(InvalidAmountException.class, ()-> account.withdraw(-5000,"2222"));
 
     }
@@ -57,7 +57,7 @@ class AccountTest {
     @Test
     public void testThatAccountNumberIsCorrect(){
         account.deposit(50000);
-        assertEquals(350685601,account.getAccountNumber());
+        assertEquals(1,account.getAccountNumber());
     }
 
 
